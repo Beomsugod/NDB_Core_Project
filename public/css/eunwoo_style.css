@@ -724,7 +724,7 @@ option:hover {
     height: 80%;
     padding: 12px;
     text-align: left;
-    min-width: 300px;
+    min-width: 95%;
 
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -790,7 +790,7 @@ option:hover {
 }
 
 /* 코드+시연 창 크기 조절 */
-.codeExam_code_wrap {
+.codeExam_code_wrap_front {
     display: flex;
     flex-direction: column;
     flex-basis: auto;

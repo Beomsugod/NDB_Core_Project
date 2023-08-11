@@ -116,7 +116,7 @@ function insertHTMLToDiv() {
             </main>
         </div>
         "`;
-    updateHighlighting(htmlString);
+    // updateHighlighting(htmlString);
     // codeExam_resultDiv.innerHTML = htmlString;
     // codeExam_htmlBox.innerText = htmlString;
     // console.log('updateHighlighting', updateHighlighting(htmlString))
@@ -379,7 +379,29 @@ function ex_1() { // DB 테이블에서 문제 제공하는 함수
 }
 
 function response_DB(){ // 전역 변수 값 확인해보기~
-    console.log(responseDB.EXAM_HTM:) 
+    console.log(responseDB.EXAM_HTML); 
+    let examName = document.querySelector(".codeExam_examContent > h2");
+    let examContent = document.querySelector(".codeExam_examDetail > span");
+    // index.html 요소 선택
+    let htmlTextarea = document.getElementById("editing_code_html");
+    let cssTextarea = document.getElementById("editing_code_Css");
+    let jsTextarea = document.getElementById("editing_code_Js");
+
+    // codeExam.html 요소 선택
+    let htmlCodeExam = document.getElementById("codeExam_html");
+    let cssCodeExam = document.getElementById("codeExam_css");
+    let jsCodeExam = document.getElementById("codeExam_js");
+    // let htmlDbExam = responseDB.EXAM_HTML;
+    // index.html에 내용 삽입
+    examName.innerText = `${responseDB.EXAM_LANGUAGE}, ${responseDB.SEARCH_WORD}`
+    examContent.innerText = responseDB.EXAM_CONTENT;
+    htmlTextarea.innerText = responseDB.EXAM_HTML;
+    cssTextarea.innerText = responseDB.EXAM_CSS;
+    jsTextarea.innerText = responseDB.EXAM_JS;
+    // codeExam.html에 내용 삽입
+    htmlCodeExam.innerHTML = responseDB.EXAM_HTML;
+    cssCodeExam.innerHTML = responseDB.EXAM_CSS;
+    jsCodeExam.innerHTML = responseDB.EXAM_JS;
 }
 
 function select() {
