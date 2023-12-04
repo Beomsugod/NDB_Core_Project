@@ -45,6 +45,8 @@
     padding: 30px;
     max-height: 400px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 
 }
 .scrollbar {
